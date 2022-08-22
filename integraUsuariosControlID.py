@@ -31,7 +31,8 @@ for indexUsuarios, rowUsuarios in dfUsuarios.iterrows():
         dfUsuarios.at[indexUsuarios, 'templates'] = digitais
 
 #CRIA CSV COM O DATAFRAME DFUSUARIOS NO FORMATO PARA IMPORTACAO NO IDSECURE DA CONTROLID
-dfUsuarios.to_csv('\\\\fileserver.orquidea.com.br\\Sistemas\\Integrações\\Metadados\\metadadosUsuariosControlID.csv',sep=',', index=False, header=True)
+#NO LUGAR DO NOME DO ARQUIVO PODE USAR UM CAMINHO DE REDE CONFORME O EXEMPLO: "\\\\fileserver.dominio.com.br\\Sistemas\\Integrações\\Metadados\\metadadosUsuariosControlID.csv"
+dfUsuarios.to_csv('metadadosUsuariosControlID.csv',sep=',', index=False, header=True)
 
 #SINALIZA QUE FINALIZOU
 print('FINALIZOU')
